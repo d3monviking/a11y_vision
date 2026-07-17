@@ -69,6 +69,3 @@ This project intentionally pins `next@14.2.35` (the latest security-patched rele
 
 Similarly, it uses `@google/generative-ai` (Google's previous-generation Gemini SDK) rather than the newer `@google/genai`, because the latter requires Node.js 20+ while `@google/generative-ai` supports Node 18+. Both SDKs talk to the same underlying Gemini REST API, so if your environment runs Node 20+, migrating to `@google/genai` is straightforward.
 
-## Why Gemini instead of OpenAI?
-
-Google AI Studio's Gemini API has a genuinely free tier — no credit card, no trial period, no expiration — that includes vision input and JSON-mode structured output on the same `gemini-3.5-flash` model used by both features here. That makes it a practical default for a project like this one where you don't want a hard dependency on paid API credits. If you'd rather use OpenAI (or another provider), the only files that would need to change are `src/lib/geminiClient.js` and the two `route.js` files under `src/app/api/ai/` — every component, every prompt's *content*, and the JSON response shapes they expect are provider-agnostic.
