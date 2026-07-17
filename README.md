@@ -2,8 +2,6 @@
 
 An AI-powered web accessibility visual auditor and code remediator, built with Next.js (App Router), Tailwind CSS, and the Google Gemini API.
 
-📖 **Looking for a deep, line-by-line walkthrough of the codebase?** See [`docs/README.md`](./docs/README.md) — it covers every file, every function, and the full request/response flow for both features.
-
 ## Features
 
 ### 🔍 Visual Auditor
